@@ -5,6 +5,7 @@
     --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
     --heading-font: Dancing Script, cursive;
+    --hover-color: #ffcc00;
 }
 
 /* Reset */
@@ -56,6 +57,14 @@ header nav a {
     text-decoration: none;
     color: #ffffff;
     padding: 0 12px;
+}
+
+header nav a:hover {
+    background-color: var(--hover-color);
+    color: var(--accent1-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
 }
 
 
