@@ -1,3 +1,4 @@
+/* CSS Variables */
 :root {
     --primary-color: #004f83;
     --accent1-color: #333333;
@@ -16,53 +17,50 @@
 
 header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--primary-color);
     padding: 10px;
 }
 
 .menu {
-    display: flex;
-    gap: 30px;
+    display: none;
 }
-a {
-    color: white;
+
+
+nav a {
     text-decoration: none;
-    /* list-style: circle; */
-    align-self: center;
+    color: white;
 }
- 
+
 .title {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     padding: 20px;
 }
 
 .images {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    /* gap: 5px; */
-    margin-left: 70px;
-    
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    padding: 20px;
 }
 
 .images img {
-    width: 400px;
-    height: 500px;
+    width: 95%;
+    height: auto;
 }
 
 figure {
-    margin: 20px;
+    margin: 0;
 }
 
 figcaption {
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    margin-top: 5px;
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
+    padding: 15px;
+    background-color: var(--primary-color);
 }
