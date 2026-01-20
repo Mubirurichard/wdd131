@@ -32,6 +32,7 @@ header {
     flex-direction: column; /* column layout */
     width: 100%;
     background-color: var(--primary-color);
+    color: #ffffff;
     padding: 0; 
 }
 
@@ -60,10 +61,16 @@ header nav a {
 }
 
 header nav a:hover {
-    color: var(--accent1-color);
+    color: var(--hover-color); /* yellow */
+    background-color: transparent;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
+}
+
+main {
+    display: block;
+    padding: 1rem;
 }
 
 
