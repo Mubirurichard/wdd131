@@ -183,6 +183,9 @@ footer {
     display: flex;
     background-color: var(--primary-color);
     color: #ffffff;
-    justify-content: center;
+    /* justify-content: center; */
     padding: 20px;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
 }

@@ -1,0 +1,59 @@
+:root {
+    --primary-color: #004f83;
+    --accent1-color: #333333;
+    --heading-font: "Times New Roman", Georgia, serif;
+    --body-font: Arial, Helvetica, sans-serif;
+    --heading-font: Dancing Script, cursive;
+    --hover-color: #ffcc00;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+a {
+    color: white;
+    text-decoration: none;
+    /* list-style: circle; */
+    align-self: center;
+}
+ 
+.title {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    margin-left: 70px;
+    
+}
+
+.images img {
+    width: 400px;
+    height: 500px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
