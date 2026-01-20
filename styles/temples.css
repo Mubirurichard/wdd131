@@ -24,7 +24,7 @@ header {
 
 .menu {
     display: flex;
-    gap: 25px;
+    gap: 30px;
 }
 a {
     color: white;
@@ -42,7 +42,7 @@ a {
 .images {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px;
+    /* gap: 5px; */
     margin-left: 70px;
     
 }
@@ -50,6 +50,15 @@ a {
 .images img {
     width: 400px;
     height: 500px;
+}
+
+figure {
+    margin: 20px;
+}
+
+figcaption {
+    display: flex;
+    justify-content: center;
 }
 
 footer {
