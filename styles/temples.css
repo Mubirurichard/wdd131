@@ -23,6 +23,50 @@ header {
     color: white;
 }
 
+.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    position: fixed;
+    padding: 10px;
+    right: -450px;
+    gap: 10px;
+    transition: .3s ease;
+}
+
+.menu.active {
+    right: 0;
+    top: 30px;
+}
+
+.ham-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.ham-menu span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+.ham-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 nav {
     display: flex;
 }

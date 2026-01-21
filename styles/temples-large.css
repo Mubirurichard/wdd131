@@ -1,9 +1,17 @@
 /* LARGE VIEW */
 @media screen and (min-width: 768px) {
 
+    .ham-menu {
+        display: none; /* hide hamburger on large screens */
+    }
+
     .menu {
         display: flex; /* show menu on large screens */
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
         gap: 30px;
+        right: 0;
     }
 
     .images {
@@ -15,14 +23,5 @@
     .images img {
         width: 100%;
         height: auto;
-    }
-        #menu {
-        display: none; /* hide hamburger on large screens */
-    }
-
-    .menu {
-        display: flex;
-        flex-direction: row;
-        gap: 30px;
     }
 }
