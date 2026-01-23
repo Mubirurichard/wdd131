@@ -1,4 +1,4 @@
-/* CSS Variables */
+CSS Variables
 :root {
     --primary-color: #004f83;
     --accent1-color: #333333;
@@ -7,7 +7,7 @@
     --hover-color: #ffcc00;
 }
 
-/* Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -78,7 +78,7 @@ nav a {
 }
 
 header nav a:hover {
-    color: var(--hover-color); /* yellow */
+    color: var(--hover-color); 
     background-color: transparent;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

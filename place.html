@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD,131,Dynamic Web Fundamentals Mubiru Rychard.</title>
+    <meta name="description" content="This page shows Uganda as a country and the weather plus some data about it by Rychard Mubiru">
+    <meta name="author" content="Mubiru Richard Innocent">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="title">UGANDA</h1>
+    </header>
+    <main class="content">
+        <!-- Image placeholder if you want to add it later -->
+        <!-- <div class="image">
+            <img src="images/mypicture.jpg" alt="The beauty of Uganda" class="country">
+        </div> -->
+        
+        <div class="details">
+            <div class="data">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 241,038 sq km</li>
+                    <li><strong>Population:</strong> 47,729,952</li>
+                    <li><strong>Capital:</strong> Kampala</li>
+                    <li><strong>Languages:</strong> English, Swahili, Luganda</li>
+                    <li><strong>Currency:</strong> Ugandan Shilling (UGX)</li>
+                    <li><strong>Time Zone:</strong> UTC+3</li>
+                    <li><strong>Calling Code:</strong> +256</li>
+                    <li><strong>Internet TLD:</strong> .ug</li>
+                </ul>
+            </div>
+            <div class="weather">
+                <h2>Weather</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="100" fill="#D90000" class="bi bi-cloud-sun" viewBox="0 0 16 16">
+                    <path d="M7 8a3.5 3.5 0 0 1 3.5 3.555.5.5 0 0 0 .624.492A1.503 1.503 0 0 1 13 13.5a1.5 1.5 0 0 1-1.5 1.5H3a2 2 0 1 1 .1-3.998.5.5 0 0 0 .51-.375A3.5 3.5 0 0 1 7 8m4.473 3a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5z"/>
+                    <path d="M10.5 1.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm3.743 1.964a.5.5 0 1 0-.707-.707l-.708.707a.5.5 0 0 0 .708.708zm-7.779-.707a.5.5 0 0 0-.707.707l.707.708a.5.5 0 1 0 .708-.708zm1.734 3.374a2 2 0 1 1 3.296 2.198q.3.423.516.898a3 3 0 1 0-4.84-3.225q.529.017 1.028.129m4.484 4.074c.6.215 1.125.59 1.522 1.072a.5.5 0 0 0 .039-.742l-.707-.707a.5.5 0 0 0-.854.377M14.5 6.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"/>
+                </svg>
+                <ul>
+                    <li><strong>Temperature:</strong> 24 °C</li>
+                    <li><strong>Conditions:</strong> Sunny</li>
+                    <li><strong>Wind:</strong> 8 km/h</li>
+                    <li><strong>Wind Chill:</strong> 23.5 °C</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p><span id="currentyear"> ©2025🌴 Mubiru Richard Innocent 🌴</span></p>
+        <p class="country">Uganda</p>
+        <p id="LastModified">Last Modified: <span id="lastModifiedDate"></span></p>
+    </footer>
+    
+    <script>
+        // Simple script to update last modified date
+        document.getElementById('lastModifiedDate').textContent = new Date(document.lastModified).toLocaleString();
+    </script>
+</body>
+</html>
