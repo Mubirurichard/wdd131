@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD,131,Dynamic Web Fundamentals Mubiru Rychard.</title>
     <meta name="description" content="This page shows Uganda as a country and the weather plus some data about it by Rychard Mubiru">
@@ -17,10 +18,11 @@
         <h1 class="title">UGANDA</h1>
     </header>
     <main class="content">
-        <!-- Image placeholder if you want to add it later -->
-        <!-- <div class="image">
-            <img src="images/mypicture.jpg" alt="The beauty of Uganda" class="country">
-        </div> -->
+            <picture>
+                <source  srcset=".images/Uganda-small.webp." media="(min-width: 1000px )">
+                <source  srcset="images/Uganda-medium.webp" media="(min-width: 500px)">
+                <img src="images/Uganda-large.webp" alt="Temple name and location" width="500" height="250">
+            </picture>
         
         <div class="details">
             <div class="data">
