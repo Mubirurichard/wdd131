@@ -40,7 +40,7 @@ header {
 }
 
 .content {
-  background-image: url('../images/Uganda-medium.webp');
+  /* background-image: url('../images/Uganda-medium.webp'); */
   background-size: cover;
   background-position: center;
   min-height: 560px;
