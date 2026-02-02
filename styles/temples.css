@@ -54,6 +54,7 @@ header nav {
     display: flex;
     flex-direction: column;
     list-style: none;
+    gap: 5px;
     padding: 10px;
 }
 
