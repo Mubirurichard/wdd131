@@ -1,6 +1,9 @@
 @media screen and (min-width: 768px) {
     .details {
         flex-direction: row;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
     }
 
     .data, .weather {

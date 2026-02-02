@@ -24,49 +24,47 @@
   </header>
 
   <main class="content">
-    <!-- Responsive hero image: WebP primary, JPEG fallback, with srcset & sizes -->
-    <!-- <picture>
-      WebP sources -->
-      <source type="image/webp"
-        srcset="images/uganda-small.webp 480w, images/uganda-medium.webp 800w, images/uganda-large.webp 1200w"
-        sizes="(max-width: 600px) 480px, (max-width: 1000px) 800px, 1200px">
-      <!-- Fallback JPEG/PNG -->
-      <source type="image/jpeg"
-        srcset="images/uganda-small.jpg 480w, images/uganda-medium.jpg 800w, images/uganda-large.jpg 1200w"
-        sizes="(max-width: 600px) 480px, (max-width: 1000px) 800px, 1200px">
-      <!-- final fallback img element; use lazy loading -->
-      <img src="images/Uganda-large.jpg"
-           alt="Aerial view of Uganda's landscape with rolling hills and lakes"
-           width="1200" height="600" loading="lazy">
-    </picture>
+    <div class="hero">
+      <!-- Responsive hero image: WebP primary, JPEG fallback, with srcset & sizes -->
+      <picture>
+        <!-- WebP sources -->
+        <source type="image/webp"
+          srcset="images/uganda-small.webp 480w, images/uganda-medium.webp 800w, images/uganda-large.webp 1200w"
+          sizes="(max-width: 600px) 480px, (max-width: 1000px) 800px, 1200px">
+        <!-- final fallback img element; use lazy loading -->
+        <img src="images/uganda-large.webp"
+             alt="Aerial view of Uganda's landscape with rolling hills and lakes"
+             width="1200" height="600" loading="lazy">
+      </picture>
 
-    <div class="details">
-      <div class="data">
-        <h2>Data</h2>
-        <ul>
-          <li><strong>Area:</strong> 241,038 sq km</li>
-          <li><strong>Population:</strong> 47,729,952</li>
-          <li><strong>Capital:</strong> Kampala</li>
-          <li><strong>Languages:</strong> English, Swahili, Luganda</li>
-          <li><strong>Currency:</strong> Ugandan Shilling (UGX)</li>
-          <li><strong>Time Zone:</strong> UTC+3</li>
-          <li><strong>Calling Code:</strong> +256</li>
-          <li><strong>Internet TLD:</strong> .ug</li>
-        </ul>
-      </div>
+      <div class="details">
+        <div class="data">
+          <h2>Data</h2>
+          <ul>
+            <li><strong>Area:</strong> 241,038 sq km</li>
+            <li><strong>Population:</strong> 47,729,952</li>
+            <li><strong>Capital:</strong> Kampala</li>
+            <li><strong>Languages:</strong> English, Swahili, Luganda</li>
+            <li><strong>Currency:</strong> Ugandan Shilling (UGX)</li>
+            <li><strong>Time Zone:</strong> UTC+3</li>
+            <li><strong>Calling Code:</strong> +256</li>
+            <li><strong>Internet TLD:</strong> .ug</li>
+          </ul>
+        </div>
 
-      <div class="weather">
-        <h2>Weather</h2>
-        <!-- your inline SVG is fine for icons -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="100" fill="#D90000" class="bi bi-cloud-sun" viewBox="0 0 16 16">
-          <!-- SVG content -->
-        </svg>
-        <ul>
-          <li><strong>Temperature:</strong> 24 °C</li>
-          <li><strong>Conditions:</strong> Sunny</li>
-          <li><strong>Wind:</strong> 8 km/h</li>
-          <li><strong>Wind Chill:</strong> 23.5 °C</li>
-        </ul>
+        <div class="weather">
+          <h2>Weather</h2>
+          <!-- your inline SVG is fine for icons -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="100" fill="#D90000" class="bi bi-cloud-sun" viewBox="0 0 16 16">
+            <!-- SVG content -->
+          </svg>
+          <ul>
+            <li><strong>Temperature:</strong> 24 °C</li>
+            <li><strong>Conditions:</strong> Sunny</li>
+            <li><strong>Wind:</strong> 8 km/h</li>
+            <li><strong>Wind Chill:</strong> 23.5 °C</li>
+          </ul>
+        </div>
       </div>
     </div>
   </main>
