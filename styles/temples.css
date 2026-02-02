@@ -42,7 +42,9 @@ header {
 }
 
 /* Navigation */
-nav {
+header nav {
+    display: flex;
+    justify-content: space-around;
     background-color: #004f83;
     border-radius: 5px;
     margin: 10px 0;
@@ -77,6 +79,9 @@ nav {
 .navigation a.active {
     background-color: var(--hover-color);
     color: #000;
+}
+ul {
+    width: 100%;
 }
 
 /* Main content */
