@@ -1,27 +1,25 @@
-/* LARGE VIEW */
 @media screen and (min-width: 768px) {
-
-    .ham-menu {
-        display: none; /* hide hamburger on large screens */
-    }
-
-    .menu {
-        display: flex; /* show menu on large screens */
+    .navigation {
         flex-direction: row;
-        position: static;
-        background-color: transparent;
-        gap: 30px;
-        right: 0;
     }
+    
+    .temple-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    header {
+        padding: 30px;
+    }
+}
 
-    .images {
-        grid-template-columns: repeat(3, 1fr); /* 🔹 3 columns */
+@media screen and (min-width: 1024px) {
+    .temple-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    body {
+        padding: 20px;
         max-width: 1200px;
         margin: 0 auto;
-    }
-
-    .images img {
-        width: 100%;
-        height: auto;
     }
 }

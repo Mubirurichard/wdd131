@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 - Temple Gallery - Mubiru Rychard</title>
+  <meta name="description" content="Filterable gallery of LDS temples with responsive design and lazy loading images.">
+  <meta name="author" content="Mubiru Richard Innocent">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1 class="title">LDS Temple Gallery</h1>
+    <nav>
+      <ul class="navigation">
+        <li><a href="#" id="home" class="active">Home</a></li>
+        <li><a href="#" id="old">Old (Before 1900)</a></li>
+        <li><a href="#" id="new">New (After 2000)</a></li>
+        <li><a href="#" id="large">Large (> 90,000 sq ft)</a></li>
+        <li><a href="#" id="small">Small (< 10,000 sq ft)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Temples of The Church of Jesus Christ of Latter-day Saints</h2>
+    <div class="temple-gallery" id="temple-container">
+      <!-- Temple cards will be dynamically generated here -->
+    </div>
+  </main>
+
+  <footer>
+    <p><span id="currentyear"> ©2024🌴 Mubiru Richard Innocent 🌴</span></p>
+    <p id="LastModified">Last Modified: <span id="lastModifiedDate"></span></p>
+  </footer>
+</body>
+</html>
