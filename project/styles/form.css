@@ -1,0 +1,538 @@
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #166088;
+    --accent-color: #4fc3a1;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --gray-color: #6c757d;
+    --light-gray: #e9ecef;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #f5f7fa;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.form-group:last-of-type {
+    border-bottom: none;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    color: var(--dark-color);
+}
+
+label i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.optional {
+    font-weight: normal;
+    color: var(--gray-color);
+    font-size: 0.95rem;
+}
+
+.help-text {
+    font-size: 0.9rem;
+    color: var(--gray-color);
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Input and Select Styles */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.1);
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23343a40' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Rating Stars */
+.rating-container {
+    margin-top: 0.5rem;
+}
+
+.rating-stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.rating-stars input {
+    display: none;
+}
+
+.rating-stars label {
+    cursor: pointer;
+    font-size: 2.2rem;
+    color: var(--light-gray);
+    transition: var(--transition);
+    margin: 0;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-stars label .far,
+.rating-stars label .fas {
+    position: absolute;
+    transition: var(--transition);
+}
+
+.rating-stars label .far {
+    opacity: 1;
+}
+
+.rating-stars label .fas {
+    opacity: 0;
+    color: #ffc107;
+}
+
+.rating-stars input:checked ~ label .far,
+.rating-stars label:hover ~ label .far,
+.rating-stars label:hover .far {
+    opacity: 0;
+}
+
+.rating-stars input:checked ~ label .fas,
+.rating-stars label:hover ~ label .fas,
+.rating-stars label:hover .fas {
+    opacity: 1;
+}
+
+.rating-stars input:checked + label .fas,
+.rating-stars input:checked ~ label .fas {
+    color: #ffc107;
+}
+
+/* Checkbox Styles */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-item input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-custom {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--gray-color);
+    border-radius: 4px;
+    margin-right: 10px;
+    position: relative;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.checkbox-item label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    cursor: pointer;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.checkbox-item input[type="checkbox"]:checked + label .checkbox-custom {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.checkbox-item input[type="checkbox"]:checked + label .checkbox-custom::after {
+    content: "✓";
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox-item input[type="checkbox"]:focus + label .checkbox-custom {
+    box-shadow: 0 0 0 3px rgba(79, 195, 161, 0.2);
+}
+
+/* Button Styles */
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 0.875rem 1.75rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-submit {
+    background-color: var(--accent-color);
+    color: white;
+    flex: 1;
+    min-width: 200px;
+}
+
+.btn-submit:hover {
+    background-color: #3db18f;
+    transform: translateY(-2px);
+}
+
+.btn-reset {
+    background-color: var(--light-gray);
+    color: var(--dark-color);
+    flex: 1;
+    min-width: 150px;
+}
+
+.btn-reset:hover {
+    background-color: #dde1e7;
+}
+
+/* Reviews Counter */
+.reviews-counter {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.reviews-counter i {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.reviews-counter span {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+}
+
+/* Confirmation Page Styles */
+.confirmation-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.success-animation {
+    font-size: 5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.confirmation-card h2 {
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.confirmation-details {
+    text-align: left;
+    background-color: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin: 2rem 0;
+}
+
+.review-summary, .next-steps {
+    margin-top: 1.5rem;
+}
+
+.review-summary h3, .next-steps h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#reviewData p {
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.next-steps ul {
+    padding-left: 1.5rem;
+}
+
+.next-steps li {
+    margin-bottom: 0.5rem;
+}
+
+.total-reviews {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #e8f4fd;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+.total-reviews i {
+    color: var(--primary-color);
+}
+
+.confirmation-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 0.875rem 1.75rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: var(--transition);
+    min-width: 200px;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #3db18f;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--light-gray);
+    color: var(--dark-color);
+}
+
+.btn-secondary:hover {
+    background-color: #dde1e7;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--dark-color);
+    color: white;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        border-radius: 0;
+    }
+    
+    header, main {
+        padding: 1.5rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-buttons, .confirmation-actions {
+        flex-direction: column;
+    }
+    
+    button, .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+    
+    .rating-stars label {
+        font-size: 1.8rem;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    header, main {
+        padding: 1rem;
+    }
+    
+    .confirmation-card {
+        padding: 1rem;
+    }
+    
+    .success-animation {
+        font-size: 3.5rem;
+    }
+    
+    .rating-stars label {
+        font-size: 1.5rem;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Validation Styles */
+input:invalid, select:invalid {
+    border-color: #e74c3c;
+}
+
+input:focus:invalid, select:focus:invalid {
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+input:invalid + .error-message,
+select:invalid + .error-message {
+    display: block;
+}

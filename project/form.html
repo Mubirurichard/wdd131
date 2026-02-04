@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 - Product Review Form - Mubiru Rychard</title>
+  <meta name="description" content="Filterable gallery of LDS temples with responsive design and lazy loading images.">
+  <meta name="author" content="Mubiru Richard Innocent">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/form.css">
+  <!-- <link rel="stylesheet" href="styles/#"> -->
+
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-star"></i> Product Review Form</h1>
+            <p class="subtitle">Share your experience with our products</p>
+        </header>
+
+        <main>
+            <form id="reviewForm" method="get" action="review.html" novalidate>
+                <!-- Product Name -->
+                <div class="form-group">
+                    <label for="productName">
+                        <i class="fas fa-box"></i> Product Name *
+                    </label>
+                    <select id="productName" name="productName" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                    <div class="help-text">Choose the product you're reviewing</div>
+                </div>
+
+                <!-- Overall Rating -->
+                <div class="form-group">
+                    <label>
+                        <i class="fas fa-chart-line"></i> Overall Rating *
+                    </label>
+                    <div class="rating-container">
+                        <div class="rating-stars">
+                            <input type="radio" id="rating-5" name="rating" value="5" required>
+                            <label for="rating-5" title="5 stars">
+                                <i class="far fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </label>
+                            
+                            <input type="radio" id="rating-4" name="rating" value="4">
+                            <label for="rating-4" title="4 stars">
+                                <i class="far fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </label>
+                            
+                            <input type="radio" id="rating-3" name="rating" value="3">
+                            <label for="rating-3" title="3 stars">
+                                <i class="far fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </label>
+                            
+                            <input type="radio" id="rating-2" name="rating" value="2">
+                            <label for="rating-2" title="2 stars">
+                                <i class="far fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </label>
+                            
+                            <input type="radio" id="rating-1" name="rating" value="1">
+                            <label for="rating-1" title="1 star">
+                                <i class="far fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </label>
+                        </div>
+                        <div class="help-text">Select your rating from 1 (lowest) to 5 (highest)</div>
+                    </div>
+                </div>
+
+                <!-- Date of Installation -->
+                <div class="form-group">
+                    <label for="installDate">
+                        <i class="fas fa-calendar-alt"></i> Date of Installation *
+                    </label>
+                    <input type="date" id="installDate" name="installDate" required>
+                    <div class="help-text">When did you install this product?</div>
+                </div>
+
+                <!-- Useful Features -->
+                <div class="form-group">
+                    <label>
+                        <i class="fas fa-check-circle"></i> Which features did you find useful? 
+                        <span class="optional">(Check all that apply)</span>
+                    </label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="feature-durability" name="features" value="Durability">
+                            <label for="feature-durability">
+                                <span class="checkbox-custom"></span>
+                                Durability
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="feature-ease" name="features" value="Ease of Use">
+                            <label for="feature-ease">
+                                <span class="checkbox-custom"></span>
+                                Ease of Use
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="feature-performance" name="features" value="Performance">
+                            <label for="feature-performance">
+                                <span class="checkbox-custom"></span>
+                                Performance
+                            </label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="feature-design" name="features" value="Design">
+                            <label for="feature-design">
+                                <span class="checkbox-custom"></span>
+                                Design
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Written Review -->
+                <div class="form-group">
+                    <label for="writtenReview">
+                        <i class="fas fa-comment-alt"></i> Written Review 
+                        <span class="optional">(Optional)</span>
+                    </label>
+                    <textarea id="writtenReview" name="writtenReview" 
+                              placeholder="Share your detailed experience with this product..."></textarea>
+                    <div class="help-text">Your review helps other customers make informed decisions</div>
+                </div>
+
+                <!-- Your Name -->
+                <div class="form-group">
+                    <label for="userName">
+                        <i class="fas fa-user"></i> Your Name 
+                        <span class="optional">(Optional)</span>
+                    </label>
+                    <input type="text" id="userName" name="userName" 
+                           placeholder="Enter your name">
+                    <div class="help-text">If provided, your name may be displayed with the review</div>
+                </div>
+
+                <!-- Form Buttons -->
+                <div class="form-buttons">
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Submit Review
+                    </button>
+                    <button type="reset" class="btn-reset">
+                        <i class="fas fa-redo"></i> Clear Form
+                    </button>
+                </div>
+            </form>
+
+            <div class="reviews-counter">
+                <i class="fas fa-chart-bar"></i>
+                <span id="totalReviews">0</span> reviews submitted so far
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy;2025 MUBIRU RYCHARD</p>
+            <p>UGANDA</p>
+            <p>Last Modification: 02/26/2025 13:56:10</p>
+        </footer>
+    </div>
+
+    <!-- <script src="js/form.js"></script> -->
+</body>
+</html>
