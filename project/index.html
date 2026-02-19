@@ -5,64 +5,194 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eternal Quest - Home</title>
     <meta name="description" content="Track your personal goals and earn rewards on your eternal journey of self-improvement">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <script src="js/main.js" defer></script>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">Eternal Quest</div>
+            <div class="logo">
+                <i class="fas fa-mountain" style="margin-right: 8px;"></i>
+                Eternal Quest
+            </div>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="goals.html">My Goals</a></li>
-                <li><a href="add-goal.html">Add Goal</a></li>
-                <li><a href="references.html">References</a></li>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="goals.html"><i class="fas fa-bullseye"></i> My Goals</a></li>
+                <li><a href="add-goal.html"><i class="fas fa-plus-circle"></i> Add Goal</a></li>
+                <li><a href="references.html"><i class="fas fa-book"></i> References</a></li>
             </ul>
-            <button class="mobile-menu" aria-label="Menu">☰</button>
+            <button class="mobile-menu" aria-label="Menu"><i class="fas fa-bars"></i></button>
         </nav>
     </header>
 
     <main>
         <section class="hero">
+            <i class="fas fa-crown" style="font-size: 4rem; color: gold; margin-bottom: 1rem;"></i>
             <h1>Welcome to Your Eternal Quest</h1>
             <p>Transform your life one goal at a time. Track progress, earn rewards, and become the best version of yourself.</p>
-            <img src="images/hero-goals.jpg" alt="Person achieving goals" loading="lazy" class="hero-image">
-            <a href="add-goal.html" class="cta-button">Start Your Journey</a>
+            
+            <!-- Using a decorative icon instead of an image for faster loading -->
+            <div class="hero-icons">
+                <i class="fas fa-rocket"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-dumbbell"></i>
+                <i class="fas fa-book-open"></i>
+            </div>
+            
+            <a href="add-goal.html" class="cta-button">
+                <i class="fas fa-play" style="margin-right: 8px;"></i>
+                Start Your Journey
+            </a>
         </section>
 
         <section class="features">
-            <h2>How It Works</h2>
+            <h2><i class="fas fa-magic" style="margin-right: 10px; color: var(--secondary-color);"></i>How It Works</h2>
             <div class="feature-grid">
                 <div class="feature-card">
-                    <img src="images/simple-goal.jpg" alt="Simple goal icon" loading="lazy" width="50" height="50">
-                    <h3>Simple Goals</h3>
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3><i class="fas fa-flag"></i> Simple Goals</h3>
                     <p>One-time achievements like running a marathon. Complete and earn points!</p>
+                    <div class="feature-example">
+                        <span class="tag"><i class="fas fa-running"></i> Run 5K</span>
+                        <span class="tag"><i class="fas fa-book"></i> Read a Book</span>
+                    </div>
                 </div>
+                
                 <div class="feature-card">
-                    <img src="images/eternal-goal.jpg" alt="Eternal goal icon" loading="lazy" width="50" height="50">
-                    <h3>Eternal Goals</h3>
+                    <div class="feature-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3><i class="fas fa-sync-alt"></i> Eternal Goals</h3>
                     <p>Daily habits like scripture study. Never complete, always rewarding.</p>
+                    <div class="feature-example">
+                        <span class="tag"><i class="fas fa-pray"></i> Daily Prayer</span>
+                        <span class="tag"><i class="fas fa-apple-alt"></i> Healthy Eating</span>
+                    </div>
                 </div>
+                
                 <div class="feature-card">
-                    <img src="images/checklist-goal.jpg" alt="Checklist goal icon" loading="lazy" width="50" height="50">
-                    <h3>Checklist Goals</h3>
+                    <div class="feature-icon">
+                        <i class="fas fa-list-check"></i>
+                    </div>
+                    <h3><i class="fas fa-tasks"></i> Checklist Goals</h3>
                     <p>Multiple completions with bonus rewards. Track your progress!</p>
+                    <div class="feature-example">
+                        <span class="tag"><i class="fas fa-church"></i> Temple Visits</span>
+                        <span class="tag"><i class="fas fa-weight-hanging"></i> Workout Days</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2><i class="fas fa-gem" style="margin-right: 10px; color: var(--accent-color);"></i>Why Join the Quest?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fas fa-trophy"></i>
+                    <h4>Earn Rewards</h4>
+                    <p>Get points for every goal you accomplish</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Track Progress</h4>
+                    <p>Watch your improvement over time</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-medal"></i>
+                    <h4>Level Up</h4>
+                    <p>Reach new levels as your score grows</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <h4>Build Habits</h4>
+                    <p>Turn goals into lifelong routines</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2><i class="fas fa-comment-dots"></i> Success Stories</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>I've finally built a consistent scripture study habit thanks to the eternal goals feature!</p>
+                    <div class="testimonial-author">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Sarah J.</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>The checklist goals with bonus points motivated me to attend the temple 10 times.</p>
+                    <div class="testimonial-author">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Michael T.</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>I love watching my level increase as I accomplish my goals. So motivating!</p>
+                    <div class="testimonial-author">
+                        <i class="fas fa-user-circle"></i>
+                        <span>David R.</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="stats-preview">
-            <h2>Your Journey So Far</h2>
+            <h2><i class="fas fa-chart-pie"></i> Your Journey So Far</h2>
             <div id="preview-stats" class="stats-container">
                 <!-- Populated by JavaScript -->
-                <p>Loading your stats...</p>
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i> Loading your stats...
+                </div>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <div class="cta-content">
+                <h2><i class="fas fa-arrow-right"></i> Ready to Begin?</h2>
+                <p>Join thousands of others on their eternal quest for self-improvement.</p>
+                <a href="add-goal.html" class="cta-button-large">
+                    <i class="fas fa-plus-circle"></i> Create Your First Goal
+                    <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                </a>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Eternal Quest. All rights reserved.</p>
-        <p><a href="references.html">References and Citations</a></p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4><i class="fas fa-mountain"></i> Eternal Quest</h4>
+                <p>Your journey to becoming better, one goal at a time.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="goals.html"><i class="fas fa-chevron-right"></i> My Goals</a></li>
+                    <li><a href="add-goal.html"><i class="fas fa-chevron-right"></i> Add Goal</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Eternal Quest. All rights reserved. | <a href="references.html"><i class="fas fa-external-link-alt"></i> References</a></p>
+        </div>
     </footer>
 </body>
 </html>
