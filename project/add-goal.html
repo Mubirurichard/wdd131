@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternal Quest - Add New Goal</title>
+    <meta name="description" content="Create a new goal to add to your eternal quest">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Eternal Quest</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="goals.html">My Goals</a></li>
+                <li><a href="add-goal.html" class="active">Add Goal</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+            <button class="mobile-menu" aria-label="Menu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Create a New Goal</h1>
+            <p>What would you like to achieve on your eternal quest?</p>
+        </section>
+
+        <section class="form-container">
+            <form id="goal-form" class="goal-form">
+                <div class="form-group">
+                    <label for="goal-name">Goal Name *</label>
+                    <input type="text" id="goal-name" name="goal-name" required minlength="3" maxlength="50">
+                    <span class="error-message" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="goal-description">Description *</label>
+                    <textarea id="goal-description" name="goal-description" required minlength="10" maxlength="200"></textarea>
+                    <span class="error-message" id="description-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="goal-type">Goal Type *</label>
+                    <select id="goal-type" name="goal-type" required>
+                        <option value="">Select a goal type</option>
+                        <option value="simple">Simple Goal (One-time completion)</option>
+                        <option value="eternal">Eternal Goal (Never ends)</option>
+                        <option value="checklist">Checklist Goal (Multiple times)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="goal-points">Points per Completion *</label>
+                    <input type="number" id="goal-points" name="goal-points" required min="1" max="1000">
+                </div>
+
+                <div id="checklist-fields" class="form-group checklist-fields hidden">
+                    <div class="form-group">
+                        <label for="goal-target">Target Completions</label>
+                        <input type="number" id="goal-target" name="goal-target" min="2" max="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="goal-bonus">Bonus Points</label>
+                        <input type="number" id="goal-bonus" name="goal-bonus" min="1" max="5000">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Create Goal</button>
+                    <button type="reset" class="btn-secondary">Reset Form</button>
+                </div>
+            </form>
+
+            <div id="form-feedback" class="form-feedback"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Eternal Quest. All rights reserved.</p>
+        <p><a href="references.html">References and Citations</a></p>
+    </footer>
+</body>
+</html>

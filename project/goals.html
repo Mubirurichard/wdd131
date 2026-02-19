@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternal Quest - My Goals</title>
+    <meta name="description" content="View and track your current goals and progress">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Eternal Quest</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="goals.html" class="active">My Goals</a></li>
+                <li><a href="add-goal.html">Add Goal</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+            <button class="mobile-menu" aria-label="Menu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>My Goals</h1>
+            <div class="score-display">
+                <h2>Current Score: <span id="total-score">0</span></h2>
+                <p>Level: <span id="current-level">1</span></p>
+            </div>
+        </section>
+
+        <section class="goals-container">
+            <div class="goal-filters">
+                <button class="filter-btn active" data-filter="all">All Goals</button>
+                <button class="filter-btn" data-filter="simple">Simple</button>
+                <button class="filter-btn" data-filter="eternal">Eternal</button>
+                <button class="filter-btn" data-filter="checklist">Checklist</button>
+            </div>
+
+            <div id="goals-list" class="goals-list">
+                <!-- Goals will be populated here by JavaScript -->
+                <p class="loading">Loading your goals...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Eternal Quest. All rights reserved.</p>
+        <p><a href="references.html">References and Citations</a></p>
+    </footer>
+</body>
+</html>

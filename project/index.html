@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternal Quest - Home</title>
+    <meta name="description" content="Track your personal goals and earn rewards on your eternal journey of self-improvement">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Eternal Quest</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="goals.html">My Goals</a></li>
+                <li><a href="add-goal.html">Add Goal</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+            <button class="mobile-menu" aria-label="Menu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Your Eternal Quest</h1>
+            <p>Transform your life one goal at a time. Track progress, earn rewards, and become the best version of yourself.</p>
+            <img src="images/hero-goals.jpg" alt="Person achieving goals" loading="lazy" class="hero-image">
+            <a href="add-goal.html" class="cta-button">Start Your Journey</a>
+        </section>
+
+        <section class="features">
+            <h2>How It Works</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <img src="images/simple-goal.jpg" alt="Simple goal icon" loading="lazy" width="50" height="50">
+                    <h3>Simple Goals</h3>
+                    <p>One-time achievements like running a marathon. Complete and earn points!</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/eternal-goal.jpg" alt="Eternal goal icon" loading="lazy" width="50" height="50">
+                    <h3>Eternal Goals</h3>
+                    <p>Daily habits like scripture study. Never complete, always rewarding.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/checklist-goal.jpg" alt="Checklist goal icon" loading="lazy" width="50" height="50">
+                    <h3>Checklist Goals</h3>
+                    <p>Multiple completions with bonus rewards. Track your progress!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-preview">
+            <h2>Your Journey So Far</h2>
+            <div id="preview-stats" class="stats-container">
+                <!-- Populated by JavaScript -->
+                <p>Loading your stats...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Eternal Quest. All rights reserved.</p>
+        <p><a href="references.html">References and Citations</a></p>
+    </footer>
+</body>
+</html>
